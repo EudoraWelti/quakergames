@@ -1,0 +1,296 @@
+:root{
+    --background:#B3B3B3; /*dark grey*/
+    --normal:white; /*white*/
+    --accent1:#8A1538; /*maroon*/
+    --accent2:#EE2737; /*red*/
+
+    --yellow:#EE2737;
+    --red:#8A1538;
+}
+
+@media only screen and (max-width: 4in) {
+  body {
+    background-color: lightblue;
+  }
+}
+body{
+    background-color: var(--background);
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    margin:0rem;
+    overflow:visible;
+    /*height:100vh;*/
+    width:100vw;
+    position: relative;
+    min-height: 100vh;
+}
+/*-------------------- HEADER --------------------*/
+.header{ /*Div for entire header: title, login, logout etc.*/
+    background-color:var(--accent1);
+    overflow:hidden;
+    height:min-content;
+    width:100%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.login{ /*Div for email,password,login,signup*/
+    order:4;
+    margin: 0 0 0 0;
+}
+.home{
+    display:inline-block;
+    margin:20px 0 20px;
+    order:1;
+    margin:20px 0px 20px 20px;
+}
+/*-------------------- TITLE --------------------*/
+body h1{ /*style for title*/
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    color:var(--background);
+    background: -webkit-linear-gradient(left,var(--accent1), var(--red));
+    margin: 0px 30px 10px 30px;
+    text-align:left;
+}
+body h2{
+    display:inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color:var(--background);
+    margin:0 20px 0;
+    text-align:right;
+}
+.title{
+    top:20px;
+    width:fit-content;
+    margin:10px 0px 0px 0px;
+    
+    display:inline-block;
+    order:2;
+}
+.subtitles{
+    display:inline-block;
+    text-align:right;
+    right:0px;
+    order:3;
+    flex-grow: 1;
+    margin:0 4em 0 0;
+}
+/*-------------------- MIDDLE --------------------*/
+.middle{
+    padding:0px 5px 2.5rem 5px;
+}
+/*-------------------- FOOTER --------------------*/
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    background-color: var(--accent1);
+    display: flex;
+    align-items: center;
+    border-width: 5px 0 0 0;
+    border-top: solid;
+    border-top-color: var(--accent2);
+    color:white;
+}
+#footerDate{
+    margin-left:5px;
+    font-style: italic;
+    order:1;
+    flex-grow: 1;
+}
+#footerUser{
+    order:2;
+    margin-right: 5px;
+}
+/*-------------------- BUTTONS --------------------*/
+.submit{
+    color:black;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background-color:white;
+    border: 2px solid black;
+    border-radius:5px;
+    width:100px;
+    min-width: fit-content;
+    margin:2px 5px;
+    cursor: pointer;
+}
+.submit:hover{
+    border-color:var(--accent1);
+    color:var(--accent1);
+    background-color: var(--background);
+}
+#loginButton{
+    color:var(--normal);
+    background-color:var(--background);
+    border-color:var(--background);
+    width:80px;
+    height:30px;
+    margin:0 40px 0 0;
+}
+#loginButton:hover{
+    border-color:var(--background);
+    color:var(--accent1);
+}
+#rm{
+    width:26px;
+    margin:0;
+}
+#elimReport{
+    width:200px;
+}
+#yesNo{
+    width:40px;
+}
+/*-------------------- TABLES --------------------*/
+table,th,td{
+    border: 3px solid black;
+    border-collapse: collapse;
+    background-color: var(--background);
+    max-width: 100%;
+}
+th{
+    background-color: var(--accent1);
+    color:white;
+    padding:5px 10px;
+}
+td{
+    background-color:white;
+    color:black;
+    padding:5px 10px;
+}
+#centeredTd{
+    text-align: center;
+}
+#inputRow td input{
+    size:3px;
+    width:100%;
+    box-sizing: border-box;
+}
+#endTable{
+    border-color:var(--background);
+}
+#descriptionData{
+    padding:0;
+}
+#descriptionData textArea{
+    border-width: 0;
+}
+/*-------------------- TEXT INPUT --------------------*/
+.textEntry{
+    border: 2px solid black;
+    font-family: 'Poppins', sans-serif;
+    color:black;
+    background-color:white;
+    width:140px;
+    border-radius:5px;
+}
+.textEntry::placeholder {
+  color: var(--background);
+}
+.textEntry:focus{
+    border-color: var(--accent1);
+    outline:none;
+    color:var(--accent1);
+}
+.textEntry:focus::placeholder{
+    color:var(--accent1);
+}
+.textArea{
+    width: 400px;
+    height: 100px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 3px solid black;
+    border-radius: 0px;
+    background-color: white;
+    resize: none;
+    font-family: 'Poppins', sans-serif;
+}
+.textArea:focus{
+    outline:none;
+}
+/*-------------------- LINKS --------------------*/
+a:link { /* unvisited link*/
+    color: var(--accent1);
+}
+a:visited { /* visited link */
+    color:var(--accent1);
+}
+a:hover { /* mouse over link */
+    color: var(--normal);
+}
+a:active { /* selected link */
+    color: var(--normal);
+}
+#headerLink{
+    text-decoration: none;
+    color:var(--background);
+}
+#footerLink{
+    color:var(--background);
+}
+/*-------------------- TITLES --------------------*/
+body h3{
+    font-size: 20px;
+    font-style:bold;
+    color:var(--accent2);
+    margin:0;
+}
+/*-------------------- IMAGES --------------------*/
+#burger{
+    width:70px;
+    height:70px;
+    cursor: pointer;
+    filter: brightness(0) saturate(100%) invert(80%) sepia(0%) saturate(0%) hue-rotate(159deg) brightness(94%) contrast(78%);
+}
+/*-------------------- FORMS --------------------*/
+form{
+    margin:0;
+    display:inline-block;
+}
+/*-------------------- LISTS --------------------*/
+ul{
+    list-style-type: circle;
+}
+li{
+    margin:5px 0;
+}
+/*-------------------- URGENT --------------------*/
+#eliminationAlert{
+    width:100%;
+    height:100px;
+    color:white;
+    background-color: var(--accent2);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+/*-------------------- ELIMINATION REPORTS --------------------*/
+#allgood td{
+    background-color: white;
+}
+#wait td{
+    background-color: lightyellow;
+}
+#stop td{
+    background-color: palevioletred;
+}
+/*-------------------- Google Login --------------------*/
+#fakeButton{
+    position:absolute;
+    pointer-events: none; 
+    right:0px;
+    padding: 10px 0;
+    background-color: var(--accent1);
+}
